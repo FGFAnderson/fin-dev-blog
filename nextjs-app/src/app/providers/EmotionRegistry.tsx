@@ -1,8 +1,8 @@
-'use client';
-import React, { ReactNode, useState } from 'react';
-import createCache, { EmotionCache } from '@emotion/cache';
-import { useServerInsertedHTML } from 'next/navigation';
-import { CacheProvider } from '@emotion/react';
+"use client";
+import React, { ReactNode, useState } from "react";
+import createCache, { EmotionCache } from "@emotion/cache";
+import { useServerInsertedHTML } from "next/navigation";
+import { CacheProvider } from "@emotion/react";
 
 interface EmotionRegistryProps {
   children: ReactNode;
@@ -10,7 +10,7 @@ interface EmotionRegistryProps {
 
 export default function EmotionRegistry({ children }: EmotionRegistryProps) {
   const [cache] = useState<EmotionCache>(() => {
-    const cache = createCache({ key: 'css' });
+    const cache = createCache({ key: "css" });
     cache.compat = true;
     return cache;
   });
@@ -18,9 +18,9 @@ export default function EmotionRegistry({ children }: EmotionRegistryProps) {
   useServerInsertedHTML(() => {
     return (
       <style
-        data-emotion={`${cache.key} ${Object.keys(cache.inserted).join(' ')}`}
+        data-emotion={`${cache.key} ${Object.keys(cache.inserted).join(" ")}`}
         dangerouslySetInnerHTML={{
-          __html: Object.values(cache.inserted).join(' '),
+          __html: Object.values(cache.inserted).join(" "),
         }}
       />
     );
