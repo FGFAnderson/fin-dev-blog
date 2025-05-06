@@ -1,11 +1,11 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 import theme from "@/theme/theme";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 
-const robotoSans = Roboto({
-  variable: "--font-roboto-sans",
+const robotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
   subsets: ["latin"],
   weight: ["400", "500", "700"],
 });
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={robotoSans.variable}>
+    <html lang="en" className={robotoMono.variable}>
       <body>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
