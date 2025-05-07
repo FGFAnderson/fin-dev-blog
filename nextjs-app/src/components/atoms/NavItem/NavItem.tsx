@@ -13,12 +13,16 @@ const StyledLink = styled(Link)(({ theme }) => ({
   textDecoration: "none",
   "&:hover": {
     cursor: "pointer",
-  } 
+  },
 }));
 
 export default function HeaderNavItem({
   children,
   href,
 }: PropsWithChildren<HeaderNavItemProps>) {
-  return <StyledLink href={href} underline="hover">{children}</StyledLink>;
+  return (
+    <StyledLink href={href} underline="hover">
+      {children}
+    </StyledLink>
+  );
 }
