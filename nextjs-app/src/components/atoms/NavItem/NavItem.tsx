@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "@mui/material/Link";
 import React, { PropsWithChildren } from "react";
 import { styled } from "@mui/material/styles";
@@ -8,8 +9,11 @@ interface HeaderNavItemProps {
 }
 
 const StyledLink = styled(Link)(({ theme }) => ({
-  color: theme.palette.primary.main,
+  color: theme.palette.text.primary,
   textDecoration: "none",
+  "&:hover": {
+    cursor: "pointer",
+  } 
 }));
 
 export default function HeaderNavItem({

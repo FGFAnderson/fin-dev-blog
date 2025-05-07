@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier . --write",
-    "format:check": "prettier . --check"
+    "format:check": "prettier . --check",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
@@ -16,18 +18,34 @@
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^7.1.0",
     "@mui/material-nextjs": "^7.1.0",
+    "@storybook/addon-interactions": "^8.6.12",
+    "@storybook/addon-links": "^8.6.12",
     "next": "15.3.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "storybook": "^8.6.12"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.6",
     "@eslint/eslintrc": "^3",
+    "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-onboarding": "^8.6.12",
+    "@storybook/blocks": "^8.6.12",
+    "@storybook/nextjs": "^8.6.12",
+    "@storybook/react": "^8.6.12",
+    "@storybook/test": "^8.6.12",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
+    "eslint-plugin-storybook": "^0.12.0",
     "prettier": "3.5.3",
     "typescript": "^5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
