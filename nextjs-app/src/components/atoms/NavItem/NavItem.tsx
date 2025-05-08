@@ -1,10 +1,9 @@
-"use client";
-
 import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
 import React, { PropsWithChildren } from "react";
 import { styled } from "@mui/material/styles";
 
-interface HeaderNavItemProps {
+export interface NavItemProps {
   href: string;
 }
 
@@ -16,13 +15,13 @@ const StyledLink = styled(Link)(({ theme }) => ({
   },
 }));
 
-export default function HeaderNavItem({
+export default function NavItem({
   children,
   href,
-}: PropsWithChildren<HeaderNavItemProps>) {
+}: PropsWithChildren<NavItemProps>) {
   return (
     <StyledLink href={href} underline="hover">
-      {children}
+      <Typography variant="h5">{children}</Typography>
     </StyledLink>
   );
 }
