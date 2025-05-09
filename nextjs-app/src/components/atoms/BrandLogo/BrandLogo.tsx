@@ -6,7 +6,10 @@ interface BrandLogoProps {
   width?: number | string;
 }
 
-const BrandLogo = ({ height = 24, width = "auto" }: BrandLogoProps) => {
+export default function BrandLogo({
+  height = 24,
+  width = "auto",
+}: BrandLogoProps) {
   return (
     <Image
       src={logoBlack}
@@ -19,6 +22,4 @@ const BrandLogo = ({ height = 24, width = "auto" }: BrandLogoProps) => {
       }}
     />
   );
-};
-
-export default BrandLogo;
+}
