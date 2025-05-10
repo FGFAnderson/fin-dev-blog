@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logoBlack from "@assets/images/logos/logo-black.svg";
+import React from "react";
 
 interface BrandLogoProps {
   height?: number | string;

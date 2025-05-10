@@ -1,22 +1,17 @@
-import React, { PropsWithChildren } from "react";
+import React from "react";
 import NavItem, { NavItemProps } from "@/components/atoms/NavItem";
 import { Box } from "@mui/material";
 
-// Define the props for NavItemList
 interface NavItemListProps {
   items: NavItemProps[];
 }
 
-export default function NavItemList({
-  children,
-  items,
-}: PropsWithChildren<NavItemListProps>) {
+export default function NavItemList({ items }: NavItemListProps) {
   return (
     <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
       {items.map((item, index) => (
-        <NavItem key={index} {...item} />
+        <NavItem key={index} href={item.href} label={item.label} />
       ))}
-      {children}
     </Box>
   );
 }
