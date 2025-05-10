@@ -8,10 +8,9 @@ export default {
 export const Default = {
   args: {
     items: [
-      { href: "/home", children: "Home" },
-      { href: "/about", children: "About" },
-      { href: "/blog", children: "Blog" },
-      { href: "/contact", children: "Contact" },
+      { href: "/", label: "Home" },
+      { href: "/about", label: "About" },
+      { href: "/contact", label: "Contact" },
     ],
   },
 };

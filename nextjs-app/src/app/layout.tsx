@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import theme from "@/theme/theme";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+import React from "react";
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",

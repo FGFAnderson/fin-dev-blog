@@ -6,7 +6,7 @@ const meta: Meta<typeof SearchField> = {
   component: SearchField,
   argTypes: {
     placeholder: { control: "text" },
-    defaultValue: { control: "text" },
+    initalValue: { control: "text" },
     variant: {
       control: { type: "select" },
       options: ["standard", "filled", "outlined"],
@@ -46,12 +46,5 @@ export const Large: Story = {
     height: 56,
     width: 320,
     placeholder: "Large search...",
-  },
-};
-
-export const WithDefaultValue: Story = {
-  args: {
-    ...Default.args,
-    defaultValue: "Initial search term",
   },
 };

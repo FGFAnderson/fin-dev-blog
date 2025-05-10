@@ -1,4 +1,6 @@
-import HeaderNavItem from "@/components/atoms/NavItem/NavItem";
+import SearchField from "@/components/atoms/SearchField";
+import React from "react";
+
 export default function Home() {
-  return <HeaderNavItem href="test">Test</HeaderNavItem>;
+  return <SearchField></SearchField>;
 }

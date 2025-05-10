@@ -1,45 +1,30 @@
-import React from "react";
 import type { Preview } from "@storybook/react";
-import { ThemeProvider } from "@mui/material/styles";
-import theme from "../src/theme/theme";
-import { Box, CssBaseline } from "@mui/material";
-import { Roboto_Mono } from "next/font/google";
-
-const robotoMono = Roboto_Mono({
-  variable: "--font-roboto-mono",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { withThemeFromJSXProvider } from "@storybook/addon-themes";
+import lightTheme from "../src/theme/lightTheme";
+import darkTheme from "../src/theme/darkTheme";
 
 const preview: Preview = {
   parameters: {
+    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
+      expanded: true,
       matchers: {
         color: /(background|color)$/i,
-        date: /Date$/i,
+        date: /Date$/,
       },
     },
   },
   decorators: [
-    (Story) => {
-      return (
-        <html lang="en" className={robotoMono.variable}>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100vh",
-              }}
-            >
-              <Story />
-            </Box>
-          </ThemeProvider>
-        </html>
-      );
-    },
+    withThemeFromJSXProvider({
+      themes: {
+        light: lightTheme,
+        dark: darkTheme,
+      },
+      defaultTheme: "light",
+      Provider: ThemeProvider,
+      GlobalStyles: CssBaseline,
+    }),
   ],
 };
 

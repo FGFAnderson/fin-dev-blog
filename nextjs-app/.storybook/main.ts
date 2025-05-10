@@ -8,6 +8,7 @@ const config: StorybookConfig = {
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
     "@storybook/addon-docs",
+    "@storybook/addon-themes",
   ],
   framework: {
     name: "@storybook/nextjs",
@@ -15,6 +16,17 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: "tag",
+  },
+  typescript: {
+    reactDocgen: "react-docgen-typescript",
+    reactDocgenTypescriptOptions: {
+      compilerOptions: {
+        allowSyntheticDefaultImports: false,
+        esModuleInterop: false,
+      },
+      shouldExtractLiteralValuesFromEnum: true,
+      shouldRemoveUndefinedFromOptional: true,
+    },
   },
 };
 export default config;

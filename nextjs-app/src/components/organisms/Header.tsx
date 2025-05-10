@@ -16,12 +16,10 @@ export default function Header() {
   return (
     <AppBar color="transparent" position="static">
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        {/* Left: Logo */}
         <Box>
           <BrandLogo width={120} height="auto" />
         </Box>
 
-        {/* Middle: Navigation */}
         <Box
           sx={{
             display: "flex",
@@ -32,7 +30,6 @@ export default function Header() {
           <NavItemList items={navItems} />
         </Box>
 
-        {/* Right: Search Field */}
         <Box>
           <SearchField width={240} variant="outlined" placeholder="Search..." />
         </Box>

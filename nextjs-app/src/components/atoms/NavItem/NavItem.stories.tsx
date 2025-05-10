@@ -7,6 +7,7 @@ export default {
 
 export const Default = {
   args: {
-    children: "Default NavItem",
+    href: "/",
+    label: "Home",
   },
 };
