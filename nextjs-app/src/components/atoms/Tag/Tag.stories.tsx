@@ -28,10 +28,10 @@ export const Primary: Story = {
   }
 }  
 
-export const Outlined: Story = {
+export const Filled: Story = {
   args: {
-    label: "Outlined",
-    variant: "outlined"
+    label: "Filled",
+    variant: "filled"
   }
 }
 
