@@ -4,6 +4,7 @@ import BrandLogo from "./BrandLogo";
 const meta: Meta<typeof BrandLogo> = {
   title: "Components/Atoms/BrandLogo",
   component: BrandLogo,
+  tags: ["autodocs"],
   argTypes: {
     height: {
       control: { type: "text" },

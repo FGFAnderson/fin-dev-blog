@@ -4,6 +4,7 @@ import SearchField from "./SearchField";
 const meta: Meta<typeof SearchField> = {
   title: "Components/Atoms/SearchField",
   component: SearchField,
+  tags: ["autodocs"],
   argTypes: {
     placeholder: { control: "text" },
     initalValue: { control: "text" },
