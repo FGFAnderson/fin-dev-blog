@@ -1,6 +1,6 @@
-import SearchField from "@/components/atoms/SearchField";
+import HomeTemplate from "@/components/templates/HomeTemplate/HomeTemplate";
 import React from "react";
 
 export default function Home() {
-  return <SearchField></SearchField>;
+  return <HomeTemplate />;
 }

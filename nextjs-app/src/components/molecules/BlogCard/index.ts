@@ -1,2 +1,2 @@
-export * from "./BlogCard"
-export { default } from "./BlogCard"
+export * from "./BlogCard";
+export { default } from "./BlogCard";

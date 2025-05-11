@@ -31,8 +31,12 @@ export default function BlogCard({
     <Card sx={{ width: { width }, height: { height } }}>
       <CardMedia image={image} alt={imageAlt} component="img" />
       <CardContent>
-        <Typography gutterBottom variant="h3"><Link href={linkToPost}>{title}</Link></Typography>
-        <Typography gutterBottom variant="body2">{description}</Typography>
+        <Typography gutterBottom variant="h3">
+          <Link href={linkToPost}>{title}</Link>
+        </Typography>
+        <Typography gutterBottom variant="body2">
+          {description}
+        </Typography>
         <Typography variant="body2">
           Published: {datePublished.toLocaleDateString()}
         </Typography>

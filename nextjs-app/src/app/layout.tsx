@@ -4,6 +4,7 @@ import { Roboto_Mono } from "next/font/google";
 import lightTheme from "@/theme/lightTheme";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import React from "react";
+import RootTemplate from "@/components/templates/RootTemplate";
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
@@ -27,7 +28,7 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <ThemeProvider theme={lightTheme}>
             <CssBaseline />
-            {children}
+            <RootTemplate>{children}</RootTemplate>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
