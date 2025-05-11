@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <AppBar color="transparent" position="static">
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Box>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
           <BrandLogo width={120} height="auto" />
         </Box>
 
