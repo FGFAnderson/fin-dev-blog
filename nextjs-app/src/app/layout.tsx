@@ -1,7 +1,7 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
-import theme from "@/theme/theme";
+import lightTheme from "@/theme/lightTheme";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import React from "react";
 
@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en" className={robotoMono.variable}>
       <body>
         <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>
+          <ThemeProvider theme={lightTheme}>
             <CssBaseline />
             {children}
           </ThemeProvider>

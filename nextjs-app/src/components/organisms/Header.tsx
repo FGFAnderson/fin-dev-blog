@@ -31,7 +31,7 @@ export default function Header() {
         </Box>
 
         <Box>
-          <SearchField width={240} variant="outlined" placeholder="Search..." />
+          <SearchField width={240}  variant="standard" placeholder="Search..." />
         </Box>
       </Toolbar>
     </AppBar>
