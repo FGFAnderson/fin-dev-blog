@@ -4,7 +4,7 @@ import Tag from "@components/atoms/Tag";
 import { TagType } from "@components/atoms/Tag";
 
 interface TagListProps {
-  tags: TagType[];
+  tags?: TagType[];
   spacing?: number;
 }
 
@@ -20,7 +20,7 @@ export default function TagList({
         gap: spacing 
       }}
     >
-      {tags.map((tag, index) => (
+      {tags && tags.map((tag, index) => (
         <Tag
           key={`${tag.label}-${index}`}
           label={tag.label}

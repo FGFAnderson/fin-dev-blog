@@ -4,6 +4,8 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
+import { TagType } from "@/components/atoms/Tag";
+import TagList from "@/components/molecules/TagList/TagList";
 
 interface BlogCardProps {
   image: string;
@@ -14,7 +16,7 @@ interface BlogCardProps {
   datePublished: Date;
   width?: number | string;
   height?: number | string;
-  //tags: Tag[] will be some sort of chip list
+  tags?: TagType[];
 }
 
 export default function BlogCard({
@@ -26,6 +28,7 @@ export default function BlogCard({
   linkToPost,
   width = "auto",
   height = "auto",
+  tags,
 }: BlogCardProps) {
   return (
     <Card sx={{ width: { width }, height: { height } }}>
@@ -41,9 +44,10 @@ export default function BlogCard({
         >
           {description}
         </Typography>
-        <Typography variant="body2" sx={{ color: "text.secondary" }}>
+        <Typography variant="body2" sx={{ pb: 1, color: "text.secondary" }}>
           Published: {datePublished.toLocaleDateString()}
         </Typography>
+        <TagList tags={tags}></TagList>
       </CardContent>
     </Card>
   );
