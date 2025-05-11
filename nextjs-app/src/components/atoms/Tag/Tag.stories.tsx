@@ -21,3 +21,23 @@ export const Default: Story = {
   },
 };
 
+export const Primary: Story = {
+  args: {
+    label: "Primary",
+    color: "primary"
+  }
+}  
+
+export const Outlined: Story = {
+  args: {
+    label: "Outlined",
+    variant: "outlined"
+  }
+}
+
+export const Small: Story = {
+  args: {
+    label: "Small",
+    size: "small"
+  }
+}

@@ -66,7 +66,7 @@ const lightTheme = createTheme({
     },
     text: {
       primary: "#000000",
-      secondary: "#666666",
+      secondary: "#404040",
     },
     error: {
       main: "#FF3B30",

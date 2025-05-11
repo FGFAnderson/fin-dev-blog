@@ -1,4 +1,3 @@
-// src/components/templates/RootTemplate/index.tsx
 import Box from "@mui/material/Box";
 import Header from "@/components/organisms/Header";
 import React from "react";
