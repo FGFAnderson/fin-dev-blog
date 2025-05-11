@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import BlogCard from "./BlogCard";
 
 const meta: Meta<typeof BlogCard> = {
-  title: "Components/molecules/BlogCard",
+  title: "Components/Organisms/BlogCard",
   component: BlogCard,
   tags: ["autodocs"],
   argTypes: {
