@@ -8,27 +8,25 @@ interface TagListProps {
   spacing?: number;
 }
 
-export default function TagList({
-  tags,
-  spacing = 1, 
-}: TagListProps) {
+export default function TagList({ tags, spacing = 1 }: TagListProps) {
   return (
-    <Box 
-      sx={{ 
-        display: "flex", 
-        flexWrap: "wrap", 
-        gap: spacing 
+    <Box
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: spacing,
       }}
     >
-      {tags && tags.map((tag, index) => (
-        <Tag
-          key={`${tag.label}-${index}`}
-          label={tag.label}
-          color={tag.color}
-          size={tag.size}
-          variant={tag.variant}
-        />
-      ))}
+      {tags &&
+        tags.map((tag, index) => (
+          <Tag
+            key={`${tag.label}-${index}`}
+            label={tag.label}
+            color={tag.color}
+            size={tag.size}
+            variant={tag.variant}
+          />
+        ))}
     </Box>
   );
 }

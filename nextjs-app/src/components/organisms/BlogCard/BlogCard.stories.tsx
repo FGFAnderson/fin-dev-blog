@@ -28,10 +28,6 @@ export const Default: Story = {
     description:
       "Deep inheritance ravages the readability of your codebase, here's 5 ways you can fix it",
     datePublished: new Date("2025-04-22"),
-    tags: [
-      {label: "Java"},
-      {label: "OOP"},
-      {label: "Refactor"},
-    ]
+    tags: [{ label: "Java" }, { label: "OOP" }, { label: "Refactor" }],
   },
 };

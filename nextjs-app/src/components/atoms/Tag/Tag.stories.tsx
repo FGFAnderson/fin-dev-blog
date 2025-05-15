@@ -17,27 +17,27 @@ type Story = StoryObj<typeof Tag>;
 
 export const Default: Story = {
   args: {
-    label: "Default"
+    label: "Default",
   },
 };
 
 export const Primary: Story = {
   args: {
     label: "Primary",
-    color: "primary"
-  }
-}  
+    color: "primary",
+  },
+};
 
 export const Filled: Story = {
   args: {
     label: "Filled",
-    variant: "filled"
-  }
-}
+    variant: "filled",
+  },
+};
 
 export const Small: Story = {
   args: {
     label: "Small",
-    size: "small"
-  }
-}
+    size: "small",
+  },
+};
