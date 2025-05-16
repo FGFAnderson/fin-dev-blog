@@ -21,7 +21,7 @@ const StyledLink = styled(Link)(({ theme }) => ({
 export default function NavItem({ href, label }: NavItemProps) {
   return (
     <StyledLink href={href} underline="hover">
-      <Typography variant="h5">{label}</Typography>
+      <Typography variant="h4">{label}</Typography>
     </StyledLink>
   );
 }

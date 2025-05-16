@@ -9,9 +9,10 @@ export default function RootTemplate({
   children: React.ReactNode;
 }) {
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+    <Box>
       <Header />
-      <Container component="main" sx={{ flexGrow: 1, py: 4 }}>
+
+      <Container maxWidth="xl" component="main">
         {children}
       </Container>
 

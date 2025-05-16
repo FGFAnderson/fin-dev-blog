@@ -5,6 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import NavItemList from "@components/molecules/NavItemList/NavItemList";
 import SearchField from "@components/atoms/SearchField";
 import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
 export default function Header() {
   const navItems = [
@@ -15,24 +16,35 @@ export default function Header() {
 
   return (
     <AppBar color="transparent" position="static">
-      <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <BrandLogo width={120} height="auto" />
-        </Box>
+      <Toolbar>
+        <Container maxWidth="xl">
+          <Box
+            sx={{
+              pt: 1,
+              px: 8,
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-end",
+              width: "100%",
+            }}
+          >
+            <Box sx={{ pb: 2 }}>
+              <NavItemList items={navItems} />
+            </Box>
 
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            flexGrow: 1,
-          }}
-        >
-          <NavItemList items={navItems} />
-        </Box>
+            <Box sx={{ alignSelf: "center" }}>
+              <BrandLogo width={160} height="auto" />
+            </Box>
 
-        <Box>
-          <SearchField width={240} variant="standard" placeholder="Search..." />
-        </Box>
+            <Box sx={{ pb: 1.5 }}>
+              <SearchField
+                width={240}
+                variant="standard"
+                placeholder="Search..."
+              />
+            </Box>
+          </Box>
+        </Container>
       </Toolbar>
     </AppBar>
   );
