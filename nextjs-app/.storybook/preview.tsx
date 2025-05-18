@@ -1,8 +1,25 @@
-import type { Preview } from "@storybook/react";
+import type { Preview, Decorator } from "@storybook/react";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { withThemeFromJSXProvider } from "@storybook/addon-themes";
 import lightTheme from "../src/theme/lightTheme";
 import darkTheme from "../src/theme/darkTheme";
+import { Roboto_Mono } from "next/font/google";
+import React from "react";
+
+const robotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
+
+
+const withFonts: Decorator = (Story, context) => {
+  return (
+    <div className={robotoMono.variable}>
+      <Story {...context} />
+    </div>
+  );
+};
 
 const preview: Preview = {
   parameters: {
@@ -16,6 +33,7 @@ const preview: Preview = {
     },
   },
   decorators: [
+    withFonts,
     withThemeFromJSXProvider({
       themes: {
         light: lightTheme,
