@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import RootTemplate from "./RootTemplate";
 import React from "react";
+import { Typography } from "@mui/material";
 
 const meta: Meta<typeof RootTemplate> = {
   title: "Templates/RootTemplate",
@@ -17,6 +18,6 @@ type Story = StoryObj<typeof RootTemplate>;
 
 export const Default: Story = {
   args: {
-    children: <p> Sub-templates will be displayed here </p>,
+    children: <Typography> Sub-templates will be displayed here </Typography>,
   },
 };

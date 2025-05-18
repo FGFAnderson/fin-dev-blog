@@ -16,6 +16,7 @@ const robotoMono = Roboto_Mono({
 const withFonts: Decorator = (Story, context) => {
   return (
     <div className={robotoMono.variable}>
+      <CssBaseline/>
       <Story {...context} />
     </div>
   );
