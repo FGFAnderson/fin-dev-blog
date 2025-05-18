@@ -12,7 +12,7 @@ export default function RootTemplate({
     <Box>
       <Header />
 
-      <Container maxWidth="xl" component="main">
+      <Container maxWidth="xl" component="main" sx={{ pt: 3 }}>
         {children}
       </Container>
 
