@@ -21,7 +21,11 @@ export default function Home() {
       description:
         "Deep inheritance ravages the readability of your codebase, here's 5 ways you can fix it",
       datePublished: new Date("2025-04-15"),
-      tags: ["Design Patterns", "Architecture", "TypeScript"],
+      tags: [
+        { label: "Design Patterns" },
+        { label: "Architecture" },
+        { label: "TypeScript" }
+      ],
     },
     {
       imageSrc: "https://placehold.co/800x600",
@@ -31,7 +35,11 @@ export default function Home() {
       description:
         "Learn how to structure your components to maximize reuse while maintaining clarity",
       datePublished: new Date("2025-04-02"),
-      tags: ["React", "Frontend", "Design Patterns"],
+      tags: [
+        { label: "React" },
+        { label: "Frontend" },
+        { label: "Design Patterns"  }
+      ],
     },
     {
       imageSrc: "https://placehold.co/800x600",
@@ -41,7 +49,11 @@ export default function Home() {
       description:
         "Deep dive into React's rendering process and strategies to prevent unnecessary re-renders",
       datePublished: new Date("2025-03-20"),
-      tags: ["React", "Performance", "Frontend"],
+      tags: [
+        { label: "React", color: "primary" },
+        { label: "Performance" },
+        { label: "Frontend" }
+      ],
     },
     {
       imageSrc: "https://placehold.co/800x600",
@@ -51,7 +63,10 @@ export default function Home() {
       description:
         "Leverage TypeScript's type system to catch more bugs at compile time",
       datePublished: new Date("2025-03-10"),
-      tags: ["TypeScript", "JavaScript"],
+      tags: [
+        { label: "TypeScript" },
+        { label: "JavaScript" }
+      ],
     },
     {
       imageSrc: "https://placehold.co/800x600",
@@ -61,7 +76,11 @@ export default function Home() {
       description:
         "From unit tests to end-to-end, learn how to effectively test your React apps",
       datePublished: new Date("2025-02-28"),
-      tags: ["Testing", "React", "Frontend"],
+      tags: [
+        { label: "Testing" },
+        { label: "React" },
+        { label: "Frontend" }
+      ],
     },
     {
       imageSrc: "https://placehold.co/800x600",
@@ -71,7 +90,10 @@ export default function Home() {
       description:
         "Flexbox, Grid, and Container Queries - power tools for responsive design",
       datePublished: new Date("2025-02-15"),
-      tags: ["CSS", "Frontend"],
+      tags: [
+        { label: "CSS" },
+        { label: "Frontend" }
+      ],
     },
   ];
 

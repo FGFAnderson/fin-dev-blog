@@ -22,7 +22,7 @@ export default function HomeTemplate({
         height="50vh"
         width="auto"
       />
-      <Grid container spacing={2}>
+      <Grid container spacing={2} sx={{ pt: 2 }}> 
         {blogPostsData.map((item, index) => (
           <Grid key={index} size={4}>
             <BlogCard
