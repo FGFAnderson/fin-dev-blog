@@ -1,12 +1,24 @@
 import Chip from "@mui/material/Chip";
 import React from "react";
-import { TagType } from "./TagTypes";
+
+type TagProps = {
+  label?: string;
+  color?: "default" | "primary" | "secondary" | "warning" | "error" | "success";
+  size?: "small" | "medium";
+  variant?: "filled" | "outlined";
+  children?: React.ReactNode;
+};
 
 export default function Tag({
   label,
   color,
   size,
   variant = "outlined",
-}: TagType) {
-  return <Chip label={label} color={color} size={size} variant={variant} />;
+  children,
+}: TagProps) {
+  const displayLabel = children || label;
+
+  return (
+    <Chip label={displayLabel} color={color} size={size} variant={variant} />
+  );
 }

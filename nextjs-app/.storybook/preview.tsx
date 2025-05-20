@@ -12,11 +12,10 @@ const robotoMono = Roboto_Mono({
   weight: ["400", "500", "700"],
 });
 
-
 const withFonts: Decorator = (Story, context) => {
   return (
     <div className={robotoMono.variable}>
-      <CssBaseline/>
+      <CssBaseline />
       <Story {...context} />
     </div>
   );

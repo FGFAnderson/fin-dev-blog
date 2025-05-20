@@ -100,10 +100,6 @@ const lightTheme = createTheme({
         root: {
           boxShadow: "none",
           border: "1px solid #E0E0E0",
-          transition: "transform 0.2s ease-in-out",
-          "&:hover": {
-            transform: "translateY(-4px)",
-          },
         },
       },
     },

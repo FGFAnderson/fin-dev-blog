@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   Box,
@@ -15,7 +17,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 interface SpotlightContainerProps {
   component?: React.ReactNode; // Component used to showcase a visual html component
   imageSrc?: string;
-  title?: string;
+  title: string;
   description?: string;
   linkToPost: string;
   width?: number | string;
@@ -47,6 +49,7 @@ export default function SpotlightContainer({
         width: width,
         height: height,
         boxShadow: 4,
+        cursor: "pointer",
       }}
     >
       {/* Conditionally render either component or image */}
@@ -77,10 +80,11 @@ export default function SpotlightContainer({
             component="h2"
             gutterBottom
             fontWeight="bold"
+            color={"primary.contrastText"}
           >
             {title}
           </Typography>
-          <Typography variant="body1" color={"text.secondary"}>
+          <Typography variant="body1" color={"primary.contrastText"}>
             {description}
           </Typography>
         </CardContent>
